@@ -33,6 +33,6 @@ contract BasicNftTest is Test {
 
         assert(basicNft.balanceOf(USER) == 1);
         assert(keccak256(bytes(basicNft.tokenURI(0))) == keccak256(bytes(PUG)));
-        //只有一个变量时，用abi.encodePacked()进行类型转换不如直接bytes
+        //只有一个变量时，用abi.encodePacked()进行类型转换感觉不如直接bytes显式类型转换方便
     }
 }
